@@ -1,0 +1,19 @@
+[package]
+name = "base-rs"
+version = "0.1.0"
+edition = "2024"                  # safe default; use "2024" if your toolchain supports it
+rust-version = "1.89"             # MSRV (adjust as you wish)
+description = "Lib to simplify parsing of different based numeral systems."
+license = "MIT"
+repository = "https://github.com/ngreese/base-rs"
+readme = "README.md"
+documentation = "https://docs.rs/base-rs"
+keywords = ["library", "hexadecimal", "binary", "parsing"]
+categories = ["encoding", "parsing", "rust-patterns"]  # see crates.io category list
+# include only what you publish to crates.io
+include = ["src/**", "README.md", "LICENSE*", "Cargo.toml", "examples/**"]
+
+[lib]
+# default is rlib; add "cdylib" or "staticlib" if you plan to be linked from C.
+path = "src/lib.rs"
+crate-type = ["rlib"]
